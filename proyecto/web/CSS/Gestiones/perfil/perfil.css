@@ -1,0 +1,25 @@
+/* Estilos para las fotos de perfil */
+.foto-perfil-nav {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.foto-perfil-teams {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0f0f0;
+}
+
+.perfil-dropdown {
+    min-width: 280px;
+    padding: 0;
+}
+
+.perfil-teams {
+    padding: 8px;
+}

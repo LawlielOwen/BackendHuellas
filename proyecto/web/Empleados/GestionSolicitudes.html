@@ -1,0 +1,258 @@
+<html>
+
+<head>
+    <title>Iniciar sesion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/Gestiones/BarraLateral.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/CuerpoGestion.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/Header.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/contenedorSolo.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/contenedor.css  ">
+    <link rel="stylesheet" href="../CSS/Gestiones/tablaGestion.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/solicitud.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/Mascotas/paginacion.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg text-light">
+            <div class="container-fluid ">
+                <a class="navbar-brand imagenLogo">
+                    <img src="../iconos/icon.png ">
+                    <span>Huellitas Suaves</span>
+            </div>
+            </a>
+            <div class="collapse navbar-collapse secciones " id="navbarNavAltMarkup">
+                <div class="navbar-nav ">
+
+                </div>
+
+              <span id="usuarioNav" class="navbar-text perfil text-light d-flex align-items-center">
+                    <img src="../img/fotoPrueba.jpg" class="fotoPerfil" id="fotoPerfil">
+                    <li class=" dropdown despliegueLogin">
+                        <button class="btn  dropdown-toggle botonUsuario" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Usuario
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-light">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="../Empleados/loginEmpleados.html">Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+                </span>
+            </div>
+            <div class="input-group busquedas">
+                <span class="input-group-text p-0 border-0 bg-transparent" id="basic-addon1">
+                    <img src="../iconos/magnifying-glass-solid.svg" class="botonBusqueda">
+                </span>
+                <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar"
+                    aria-describedby="basic-addon1" id="buscar">
+            </div>
+            </div>
+        </nav>
+    </header>
+    <nav>
+        <div class="menu-btn barraNavegacion-btn " id="sidebar-btn">
+            <i class='bx bx-menu'></i>
+            <i class='bx bx-x'></i>
+        </div>
+        <div class="barraNavegacion" id="barraNavega">
+            <div class="headerBarra">
+                <div class="menu-botones" id="botonBarra">
+                    <i class='bx bx-chevron-left'></i>
+                </div>
+            </div>
+            <ul class="menuNavegacion">
+                <li class="itemsMenu ">
+                    <a class="seccion" href="GestionMascotas.html">
+                        <i class='bx bxs-dog'></i>
+                        <span>Mascotas</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionEmpleados.html">
+                        <i class='bx bxs-user-detail'></i>
+                        <span>Empleados</span>
+                    </a>
+                </li>
+                <li class="itemsMenu activo">
+                    <a class="seccion" href="GestionSolicitudes.html">
+                        <i class='bx bxs-file-doc'></i>
+                        <span>Solicitudes</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionCentros.html">
+                        <i class='bx bxs-business'></i>
+                        <span>Centros</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionAdoptantes.html">
+                        <i class='bx bxs-user'></i>
+                        <span>Adoptantes</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionDonaciones.html">
+                        <i class='bx bxs-donate-heart'></i>
+                        <span>Donaciones</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionAfiliaciones.html">
+                        <i class='bx bx-sitemap'></i>
+                        <span>Afliaciones</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="footerBarra">
+                <div class="menu">
+                    <div class="user">
+                        <div class="user-img">
+                            <img src="../img/fotoPrueba.jpg">
+                        </div>
+                        <div class="user-data">
+                            <span class="name">Usuario</span>
+                            <span class="email">Empleado@gmail.com</span>
+                        </div>
+                        <div class="user-icon">
+                            <i class='bx bx-exit'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <div class="contenedores">
+                <div class="titulo">
+                    <h4 class="fw-bold">Gestión de solicitudes</h4>
+                </div>
+
+                <div class="contenedorSolo">
+                    <h4>Solicitudes Pendientes</h4>
+                    <div class="adoptadosOrden">
+                        <p id="contadorPendientes"></p>
+                        <i class="iconoConta">
+                            <img src="../iconos/IconosGestion/informe-medico.png" alt="pendientes">
+                        </i>
+                    </div>
+                </div>
+
+                <div class="contenedorSolo">
+                    <h4>Solicitudes Aceptadas</h4>
+                    <div class="adoptadosOrden">
+                        <p id="contadorAceptadas"></p>
+                        <i class="iconoConta3">
+                            <img src="../iconos/IconosGestion/check-circle-solid-24.png" alt="aceptadas">
+                        </i>
+                    </div>
+                </div>
+
+                <div class="contenedorSolo">
+                    <h4>Solicitudes Rechazadas</h4>
+                    <div class="adoptadosOrden">
+                        <p id="contadorRechazadas"></p>
+                        <i class="iconoConta2">
+                            <img src="../iconos/IconosGestion/x-circle-solid-24.png" alt="rechazadas">
+                        </i>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <div class="container-fluid contenedorPrincipal">
+            <div class="filtros-container">
+                <div class="filtros text-secondary">
+                    <span>Estatus:</span>
+                    <div class="dropdown ">
+                        <button class="btn botonOpcion dropdown-toggle  text-secondary" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Todos
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="Todos">Todos</a></li>
+                            <li><a class="dropdown-item" href="#" id="Aceptada">Aceptada</a></li>
+                            <li><a class="dropdown-item" href="#" id="Pendiente">Pendiente</a></li>
+                            <li><a class="dropdown-item" href="#" id="Rechazada">Rechazada</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start">
+            </div>
+            <div class="table-responsive">
+                <table class="tablaGestiones table table-hover shadow-sm">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">Mascota</th>
+                            <th scope="col">Estatus</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Adoptante</th>
+                            <th scope="col">Revisar Solicitud</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+    <div class="modal fade" id="revisarSolicitud" tabindex="-1" aria-labelledby="revisarSolicitudLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" id="informacion">
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="eliminarSolicitud" tabindex="-1" aria-labelledby="eliminarSolicitud" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id=""><i class='bx bxs-trash-alt'></i> Eliminar Solicitud</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <form id="formEliminarSolicitud">
+                    <div class="modal-body">
+                        <input type="hidden" id="idSolicitudEliminar" name="id_solicitud">
+                        <p>¿Estás seguro de que deseas eliminar la solicitud de la mascota <strong
+                                id="nombreMascota"></strong>?</p>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger" onclick="eliminarSolicitud()"><i
+                                class='bx bxs-trash'></i> Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/Gestiones/BarraNavegacion.js"></script>
+    <script src="../JS/Gestiones/solcitudes.js"></script>
+    <script src="../JS/Header/empleado.js"></script>
+</body>
+
+</html>

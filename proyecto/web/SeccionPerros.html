@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Adopta!!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="CSS/Header/header.css">
+  <link rel="stylesheet" href="CSS/Adopciones/Secciones.css">
+  <link rel="stylesheet" href="CSS/Footer/footer.css">
+  <link rel="stylesheet" href="CSS/Adopciones/alert.css">
+  <link rel="stylesheet" href="CSS/Adopciones/filtro.css">
+  <link rel="stylesheet" href="CSS/Adopciones/paginacion.css">
+   <link rel="stylesheet" href="CSS/Adopciones/ModalRes.css">
+   <link rel="stylesheet" href="CSS/Adopciones/spinerCarga.css">
+</head>
+
+<body>
+  <div class="alert alert-dismissible fade show d-none mx-auto notifications-container" id="fallo" role="alert">
+    <button type="button" class="btn-close " aria-label="Close" onclick="cerrarAviso()"
+      style="transform: scale(0.75);"></button>
+    <div class="flex">
+      <div class="flex-shrink-0">
+        <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 alert-svg">
+          <path clip-rule="evenodd"
+            d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+            fill-rule="evenodd">
+          </path>
+        </svg>
+      </div>
+      <div class="alert-prompt-wrap">
+        <p class="text-sm text-yellow-700 mb-0">
+          <span id="mensaje-error">
+          </span>
+          <a class="alert-prompt-link" href="Login.html"><br>Ir a login</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
+      <div class="container-fluid">
+
+        <a class="navbar-brand imagenLogo" href="#">
+          <img src="iconos/icon.png" alt="Logo" width="65" height="65">
+        </a>
+
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="navbar-nav mx-auto text-center">
+            <a class="nav-link active" href="inicioAdopciones.html">Adopciones</a>
+            <a class="nav-link" href="Donaciones.html">Donaciones</a>
+            <a class="nav-link" href="Afiliaciones.html">Afiliación</a>
+            <a class="nav-link" href="QuienesSomos.html">¿Quiénes somos?</a>
+            <a class="nav-link" href="Empleados/loginEmpleados.html" id="btnEmpleado">Empleados</a>
+          </div>
+          <span class="navbar-text perfil d-flex align-items-center" id="usuario">
+            <a class="nav-link" href="Login.html">Iniciar sesión / Crear cuenta</a>
+          </span>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="hero-container">
+    <div class="hero-image imagenFondo">
+      <div class="textosImagen">
+        <h1 class="titulo">Adopta amor, cambia una vida con tu apoyo</h1>
+        <p class="subtitulo">En nuestro centro d e acopio, nos dedicamos a encontrar hogares amorosos
+          para los animales en situación de calle. Nuestra misión es promover la adopción
+          responsable y el bienestar animal en un ambiente acogedor.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="input-group buscador">
+      <span class="input-group-text barritas">
+        <img src="iconos/barrasBusqueda.svg" width="15px" height="15px">
+      </span>
+      <input type="text" class="form-control busquedas" placeholder="Buscar por nombre" id="buscar">
+      <button class=" botonBuscar" type="button">
+        <img src="iconos/magnifying-glass-solid.svg" width="15px" height="15px" alt="Buscar">
+      </button>
+    </div>
+  </section>
+
+  <section class="container mt-5">
+     <button class="btn btn-light d-lg-none mb-3" type="submit" data-bs-toggle="modal" data-bs-target="#modalFiltro"
+      style="width:100%;">
+      <i class='bx bx-filter-alt'></i> Filtros
+    </button>
+    <div class="row">
+      <div class="col-md-3 mb-4 filtros">
+        <div class="card p-3  cartaFiltro">
+          <h5 class="mb-3"><i class='bx bx-filter-alt'></i> Filtros</h5>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">Tipo</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Perro" id="filtroPerro" checked>
+              <label class="form-check-label" for="filtroPerro">Perros</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">Tamaño</label>
+            <select class="form-select" id="filtroTamano">
+              <option value="">Todos</option>
+              <option value="Pequeño" id="Pequeño">Pequeño</option>
+              <option value="Mediano" id="Mediano">Mediano</option>
+              <option value="Grande" id="Grande">Grande</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">Sexo</label>
+            <select class="form-select" id="filtroSexo">
+              <option value="">Todos</option>
+              <option value="Macho" id="Macho">Macho</option>
+              <option value="Hembra" id="Hembra">Hembra</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">Carácter</label>
+            <select class="form-select" id="filtroCaracter">
+              <option value="">Todos</option>
+              <option value="Juguetón">Juguetón</option>
+              <option value="Tranquilo">Tranquilo</option>
+              <option value="Guardián">Guardián</option>
+              <option value="Tímido">Tímido</option>
+              <option value="Activo">Activo</option>
+            </select>
+          </div>
+
+          <button class="btn  mt-3 botonF" onclick="aplicarFiltros()">Aplicar filtros</button>
+        </div>
+      </div>
+
+      <div class="col-md-9 cartitas">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="contenedorCartas">
+
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center mt-3" id="paginacion">
+
+    </div>
+  </section>
+
+  <footer class="container-fluid  p-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="text-center text-light textosFooter ">
+        <span>Derechos reservados</span>
+        <span class="mx-2">|</span>
+        <span>Términos de servicio</span>
+        <span class="mx-2">|</span>
+        <span>2025 Todos los derechos reservados</span>
+      </div>
+
+      <div class="iconos d-flex gap-4">
+        <a><img src="iconos/redesSocialesIconos/fb_icon.svg" width="20"></a>
+        <a><img src="iconos/redesSocialesIconos/instagram_icono.svg" width="20"></a>
+        <a><img src="iconos/redesSocialesIconos/twitter_icono.svg" width="20"></a>
+        <a><img src="iconos/redesSocialesIconos/whatsapp_icono.svg" width="20"></a>
+      </div>
+    </div>
+  </footer>
+  <div class="modal fade" id="info" tabindex="-1" aria-labelledby="tituloModalAnimal" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" id="informacion">
+      </div>
+    </div>
+  </div>
+    <div class="modal fade" id="modalFiltro" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header headerModal ">
+          <h5 class="modal-title text-light">Filtrar búsqueda</h5>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label fw-bold">Tipo</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Perro" id="filtroPerro" checked>
+              <label class="form-check-label" for="filtroPerro">Perros</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+             <label class="form-label fw-bold">Tamaño</label>
+            <select class="form-select" id="filtroTamanoRes">
+              <option value="">Todos</option>
+              <option value="Pequeño" id="Pequeño">Pequeño</option>
+              <option value="Mediano" id="Mediano">Mediano</option>
+              <option value="Grande" id="Grande">Grande</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">Sexo</label>
+            <select class="form-select" id="filtroSexorRes">
+              <option value="">Todos</option>
+              <option value="Macho">Macho</option>
+              <option value="Hembra">Hembra</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">Carácter</label>
+            <select class="form-select" id="filtroCaracterRes">
+              <option value="">Todos</option>
+              <option value="Juguetón">Juguetón</option>
+              <option value="Tranquilo">Tranquilo</option>
+              <option value="Guardián">Guardián</option>
+              <option value="Tímido">Tímido</option>
+              <option value="Activo">Activo</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn  botonF" id="btnAplicarFiltros" onclick="aplicarFiltrosResponsive()">Aplicar
+            filtros</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="carga-spinner " id="carga">
+  <div class="spinner-grow spinner-huellitas" role="status">
+    <span class="visually-hidden"> </span>
+   <i class='bx bxs-dog' ></i>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/Adopciones/seccionPerros.js"></script>
+    <script src="JS/Header/Usuario.js"></script>
+    <script src="JS/Login/loginAdoptantes.js"></script>
+</body>
+
+</html>

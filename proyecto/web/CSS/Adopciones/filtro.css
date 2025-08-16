@@ -1,0 +1,49 @@
+.filtros .form-check-label {
+  font-weight: 500;
+  font-size: 14px;
+}
+.cartaFiltro {
+  border-radius: 20px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+.filtros h5 {
+  font-weight: bold;
+  color: #444;
+}
+
+
+.filtros {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 85px;
+  height: fit-content;
+  align-self: flex-start;
+}
+
+.filtros .card {
+  width: 100%;
+}
+
+.botonF {
+    background-color: #B9CBA5;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.botonF:hover {
+    background-color: #9DB58F;
+    color: white;
+}
+@media (max-width: 991.98px) {
+  .filtros {
+    display: none !important;
+  }
+  .botonF{
+    border-radius: 6px;
+  }
+}

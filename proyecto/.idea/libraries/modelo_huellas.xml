@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="modelo_huellas">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/modelo_huellas/dist/modelo_huellas.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

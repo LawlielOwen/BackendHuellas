@@ -1,0 +1,51 @@
+footer {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  background-color: #221E1B;
+  margin-top: 10px;
+  padding: 20px 10px;
+  color: white;
+}
+
+.textosFooter {
+  text-align: center;
+  margin: 0 auto;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se apilen en móvil */
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.iconos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .footer-content {
+    flex-direction: column; /* Apila verticalmente solo en móvil */
+    gap: 15px;
+  }
+  
+  .textosFooter span {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .textosFooter span.mx-2 {
+    display: none;
+  }
+  
+  /* Opcional: ajustar iconos si es necesario */
+  .iconos {
+    gap: 15px;
+  }
+  
+}

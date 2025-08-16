@@ -1,0 +1,271 @@
+<html>
+
+<head>
+    <title>Iniciar sesion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/Gestiones/BarraLateral.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/CuerpoGestion.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/Header.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/contenedorTitulo.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/contenedor.css  ">
+    <link rel="stylesheet" href="../CSS/Gestiones/tablaGestion.css">
+    <link rel="stylesheet" href="../CSS/Gestiones/headerModal.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg text-light">
+            <div class="container-fluid ">
+                <a class="navbar-brand imagenLogo">
+                    <img src="../iconos/icon.png ">
+                    <span>Huellitas Suaves</span>
+            </div>
+            </a>
+            <div class="collapse navbar-collapse secciones " id="navbarNavAltMarkup">
+                <div class="navbar-nav ">
+                 
+                </div>
+                 
+               <span id="usuarioNav" class="navbar-text perfil text-light d-flex align-items-center">
+                    <img src="../img/fotoPrueba.jpg" class="fotoPerfil" id="fotoPerfil">
+                    <li class=" dropdown despliegueLogin">
+                        <button class="btn  dropdown-toggle botonUsuario" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Usuario
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-light">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="../Empleados/loginEmpleados.html">Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+                </span>
+            </div>
+             <div class="input-group busquedas">
+                        <span class="input-group-text p-0 border-0 bg-transparent" id="basic-addon1">
+                            <img src="../iconos/magnifying-glass-solid.svg" class="botonBusqueda">
+                        </span>
+                        <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar"
+                            aria-describedby="basic-addon1" id="buscar">
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <nav>
+             <div class="menu-btn barraNavegacion-btn " id="sidebar-btn">
+            <i class='bx bx-menu'></i>
+            <i class='bx bx-x'></i>
+        </div>
+        <div class="barraNavegacion" id="barraNavega">
+            <div class="headerBarra">
+                <div class="menu-botones" id="botonBarra">
+                    <i class='bx bx-chevron-left'></i>
+                </div>
+            </div>
+            <ul class="menuNavegacion">
+                <li class="itemsMenu ">
+                    <a class="seccion" href="GestionMascotas.html">
+                        <i class='bx bxs-dog'></i>
+                        <span>Mascotas</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionEmpleados.html">
+                        <i class='bx bxs-user-detail'></i>
+                        <span>Empleados</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionSolicitudes.html">
+                        <i class='bx bxs-file-doc'></i>
+                        <span>Solicitudes</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionCentros.html">
+                        <i class='bx bxs-business'></i>
+                        <span>Centros</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionAdoptantes.html">
+                        <i class='bx bxs-user'></i>
+                        <span>Adoptantes</span>
+                    </a>
+                </li>
+                <li class="itemsMenu">
+                    <a class="seccion" href="GestionDonaciones.html">
+                        <i class='bx bxs-donate-heart'></i>
+                        <span>Donaciones</span>
+                    </a>
+                </li>
+                <li class="itemsMenu activo">
+                    <a class="seccion" href="GestionAfiliaciones.html">
+                        <i class='bx bx-sitemap'></i>
+                        <span>Afliaciones</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="footerBarra">
+                <div class="menu">
+                    <div class="user">
+                        <div class="user-img">
+                            <img src="../img/fotoPrueba.jpg">
+                        </div>
+                        <div class="user-data">
+                            <span class="name">Usuario</span>
+                            <span class="email">Empleado@gmail.com</span>
+                        </div>
+                        <div class="user-icon">
+                            <i class='bx bx-exit'></i>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+    </nav>
+
+    <main>
+        <section>
+            <div class="contenedores">
+                <div class="titulo">
+                    <h4 class="fw-bold">Gestión de Afiliaciones</h4>
+                </div>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid contenedorPrincipal">
+            <div class="filtros-container">
+                
+            </div>
+            <div class="d-flex justify-content-start">
+            </div>
+            <div class="table-responsive">
+                 <table class="tablaGestiones table table-hover shadow-sm">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Tipo de afiliado</th>
+                            <th scope="col">Disponibilidad</th>
+                            <th scope="col">Medio de contacto</th>
+                            <th scope="col">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+           
+        </div>
+    </main>
+<div class="modal fade" id="modAfiliado" tabindex="-1" aria-labelledby="modAfiliado" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header text-white">
+        <h5 class="modal-title" id=""><i class='bx bxs-edit'></i> Modificar Afiliado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+     <form id="formModificarAfiliado">
+        <input type="hidden" id="idAfiliadoMod" name="id_afiliado">
+        <input type="hidden" id="idPersonaMod" name="id_persona">
+
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="nombreMod" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombreMod" name="nombre" required>
+            </div>
+            <div class="col-md-6">
+              <label for="correoMod" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="correoMod" name="correo" required>
+            </div>
+            <div class="col-md-6">
+              <label for="telefonoMod" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="telefonoMod" name="telefono" required>
+            </div>
+            <div class="col-md-6">
+              <label for="mascotasMod" class="form-label">¿Tiene mascotas afiliadas?</label>
+              <select class="form-select" id="mascotasMod" name="mascotas_afiliado" required>
+                <option disabled selected>Selecciona una opción</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="tipoAfiliadoMod" class="form-label">Tipo de afiliado</label>
+              <select class="form-select" id="tipoAfiliadoMod" name="tipo_afiliado" required>
+                <option disabled selected>Selecciona una opción</option>
+                <option value="Voluntariado">Voluntariado</option>
+                <option value="Rescate">Rescate</option>
+                <option value="Donaciones">Donaciones</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="frecuenciaMod" class="form-label">Frecuencia de ayuda</label>
+              <select class="form-select" id="frecuenciaMod" name="frecuencia_ayuda" required>
+                <option disabled selected>Selecciona una opción</option>
+                <option value="Una vez">Una vez</option>
+                <option value="Semanal">Semanal</option>
+                <option value="Mensual">Mensual</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="medioContactoMod" class="form-label">Medio de contacto preferido</label>
+              <select class="form-select" id="medioContactoMod" name="medio_contacto" required>
+                <option disabled selected>Selecciona una opción</option>
+                <option value="Teléfono">Teléfono</option>
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="Correo">Correo</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="disponibilidadMod" class="form-label">Disponibilidad de horario</label>
+              <input type="text" class="form-control" id="disponibilidadMod" name="disponibilidad" required>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+         <button type="submit" class="btn btn-primary"><i class='bx bxs-save'></i> Guardar Cambios</button>
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="eliminarAfiliado" tabindex="-1" aria-labelledby="eliminarAfiliado" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="modalEliminarAfiliadoLabel"><i class='bx bxs-trash'></i> Eliminar Afiliado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <form id="formEliminarAfiliado">
+        <input type="hidden" id="idAfiliado" name="idafiliado">
+        <div class="modal-body">
+          <p>¿Estás seguro de que deseas eliminar al afiliado <strong id="nombreAfiliadoEliminar"></strong>?</p>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-danger"><i class='bx bxs-trash'></i> Eliminar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/Gestiones/BarraNavegacion.js"></script>
+     <script src="../JS/Gestiones/GestionAfiliacion.js" type="text/javascript"></script>
+     <script src="../JS/Header/empleado.js"></script>
+</body>
+
+</html>

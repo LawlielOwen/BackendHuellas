@@ -1,0 +1,524 @@
+<html>
+
+<head>
+  <title>Iniciar sesion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/Gestiones/BarraLateral.css">
+  <link rel="stylesheet" href="../CSS/Gestiones/CuerpoGestion.css">
+  <link rel="stylesheet" href="../CSS/Gestiones/Header.css">
+  <link rel="stylesheet" href="../CSS/Gestiones/contenedorTitulo.css">
+  <link rel="stylesheet" href="../CSS/Gestiones/contenedor.css  ">
+  <link rel="stylesheet" href="../CSS/Gestiones/tablaGestion.css">
+  <link rel="stylesheet" href="../CSS/Gestiones/headerModal.css">
+  <link rel="stylesheet" href="../CSS/Gestiones/Mascotas/paginacion.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg text-light">
+      <div class="container-fluid ">
+        <a class="navbar-brand imagenLogo">
+          <img src="../iconos/icon.png ">
+          <span>Huellitas Suaves</span>
+      </div>
+      </a>
+      <div class="collapse navbar-collapse secciones " id="navbarNavAltMarkup">
+        <div class="navbar-nav ">
+
+        </div>
+
+         <span id="usuarioNav" class="navbar-text perfil text-light d-flex align-items-center">
+                    <img src="../img/fotoPrueba.jpg" class="fotoPerfil" id="fotoPerfil">
+                    <li class=" dropdown despliegueLogin">
+                        <button class="btn  dropdown-toggle botonUsuario" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Usuario
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-light">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="../Empleados/loginEmpleados.html">Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+                </span>
+      </div>
+      <div class="input-group busquedas">
+        <span class="input-group-text p-0 border-0 bg-transparent" id="basic-addon1">
+          <img src="../iconos/magnifying-glass-solid.svg" class="botonBusqueda">
+        </span>
+        <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon1"
+          id="buscar">
+      </div>
+      </div>
+    </nav>
+  </header>
+  <nav>
+    <div class="menu-btn barraNavegacion-btn " id="sidebar-btn">
+      <i class='bx bx-menu'></i>
+      <i class='bx bx-x'></i>
+    </div>
+    <div class="barraNavegacion" id="barraNavega">
+      <div class="headerBarra">
+        <div class="menu-botones" id="botonBarra">
+          <i class='bx bx-chevron-left'></i>
+        </div>
+      </div>
+      <ul class="menuNavegacion">
+        <li class="itemsMenu ">
+          <a class="seccion" href="GestionMascotas.html">
+            <i class='bx bxs-dog'></i>
+            <span>Mascotas</span>
+          </a>
+        </li>
+        <li class="itemsMenu activo">
+          <a class="seccion" href="GestionEmpleados.html">
+            <i class='bx bxs-user-detail'></i>
+            <span>Empleados</span>
+          </a>
+        </li>
+        <li class="itemsMenu">
+          <a class="seccion" href="GestionSolicitudes.html">
+            <i class='bx bxs-file-doc'></i>
+            <span>Solicitudes</span>
+          </a>
+        </li>
+        <li class="itemsMenu">
+          <a class="seccion" href="GestionCentros.html">
+            <i class='bx bxs-business'></i>
+            <span>Centros</span>
+          </a>
+        </li>
+        <li class="itemsMenu">
+          <a class="seccion" href="GestionAdoptantes.html">
+            <i class='bx bxs-user'></i>
+            <span>Adoptantes</span>
+          </a>
+        </li>
+        <li class="itemsMenu">
+          <a class="seccion" href="GestionDonaciones.html">
+            <i class='bx bxs-donate-heart'></i>
+            <span>Donaciones</span>
+          </a>
+        </li>
+        <li class="itemsMenu">
+          <a class="seccion" href="GestionAfiliaciones.html">
+            <i class='bx bx-sitemap'></i>
+            <span>Afliaciones</span>
+          </a>
+        </li>
+      </ul>
+      <div class="footerBarra">
+        <div class="menu">
+          <div class="user">
+            <div class="user-img">
+              <img src="../img/fotoPrueba.jpg">
+            </div>
+            <div class="user-data">
+              <span class="name">Usuario</span>
+              <span class="email">Empleado@gmail.com</span>
+            </div>
+            <div class="user-icon">
+              <i class='bx bx-exit'></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <main>
+    <section>
+      <div class="contenedores">
+        <div class="titulo">
+          <h4 class="fw-bold">Gestión de empleados</h4>
+          <div class="botonAgregarContainer">
+            <button class="btn botonAgregar" data-bs-toggle="modal" data-bs-target="#agregarEmpleado">
+              <i class='bx bxs-plus-circle '></i> Agregar
+            </button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <div class="container-fluid contenedorPrincipal">
+      <div class="filtros-container">
+        <div class="filtros text-secondary">
+          <span>Estatus:</span>
+          <div class="dropdown ">
+            <button class="btn botonOpcion dropdown-toggle  text-secondary" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Todos
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Todos</a></li>
+              <li><a class="dropdown-item" href="#">Activo</a></li>
+              <li><a class="dropdown-item" href="#">Inactivo</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-start">
+      </div>
+      <div class="table-responsive">
+        <table class="tablaGestiones table table-hover shadow-sm">
+          <thead>
+            <tr>
+
+              <th scope="col">Nombre</th>
+              <th scope="col">Estatus</th>
+              <th scope="col">Genero</th>
+              <th scope="col">Clave</th>
+              <th scope="col">Rol</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination d-flex flex-wrap justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+  <!-- Todos los modales del boostrap aqui estan   -->
+  <!-- Modal Agregar Empleado -->
+  <div class="modal fade" id="agregarEmpleado" tabindex="-1" aria-labelledby="agregarEmpleadoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header mi-header-personalizado text-white">
+          <h5 class="modal-title" id="agregarEmpleadoLabel"><i class='bx bxs-user-plus'></i> Agregar Empleado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="formAgregarEmpleado" enctype="multipart/form-data">
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label for="nombreEmpleado" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreEmpleado" name="nombre" required>
+              </div>
+              <div class="col-md-4">
+                <label for="apellidoPatEmpleado" class="form-label">Apellido Paterno</label>
+                <input type="text" class="form-control" id="apellidoPatEmpleado" name="apellido_paterno" required>
+              </div>
+              <div class="col-md-4">
+                <label for="apellidoMatEmpleado" class="form-label">Apellido Materno</label>
+                <input type="text" class="form-control" id="apellidoMatEmpleado" name="apellido_materno" required>
+              </div>
+              <div class="col-md-4">
+                <label for="fechaNacEmpleado" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacEmpleado" name="fecha_nacimiento" required>
+              </div>
+              <div class="col-md-4">
+                <label for="direccionEmpleado" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccionEmpleado" name="direccion" required>
+              </div>
+              <div class="col-md-4">
+                <label for="cpEmpleado" class="form-label">Código Postal</label>
+                <input type="text" class="form-control" id="cpEmpleado" name="codigo_postal" required>
+              </div>
+              <div class="col-md-4">
+                <label for="telefonoEmpleado" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="telefonoEmpleado" name="telefono" required>
+              </div>
+              <div class="col-md-4">
+                <label for="correoEmpleado" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="correoEmpleado" name="correo" required>
+              </div>
+              <div class="col-md-4">
+                <label for="contrasenaEmpleado" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasenaEmpleado" name="contrasena" required>
+              </div>
+              <div class="col-md-4">
+                <label for="rolEmpleado" class="form-label">Rol</label>
+                <select class="form-select" id="rolEmpleado" name="rol" required>
+                  <option disabled selected>Selecciona una opción</option>
+                  <option value="Administrador">Administrador</option>
+                  <option value="Capturista">Capturista</option>
+                  <option value="Veterinario">Veterinario</option>
+                  <option value="Rescatista">Rescatista</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="generoEmpleado" class="form-label">Género</label>
+                <select class="form-select" id="generoEmpleado" name="genero" required>
+                  <option disabled selected>Selecciona una opción</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="fotoEmpleado" class="form-label">Foto</label>
+                <input type="file" class="form-control" id="fotoEmpleado" name="foto" accept="image/*" required>
+              </div>
+              <div class="col-md-4">
+                <label for="centroEmpleado" class="form-label">Centro</label>
+                <select class="form-select" id="centroEmpleado" name="centroEmpleado" required>
+                  <option disabled selected>Selecciona un centro</option>
+
+                </select>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="submit" class="btn btn-success"><i class='bx bxs-save'></i> Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Modificar Empleado -->
+  <div class="modal fade" id="modEmpleado" tabindex="-1" aria-labelledby="modEmpleadoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header mi-header-personalizado text-white">
+          <h5 class="modal-title"><i class='bx bxs-edit'></i> Modificar Empleado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="formEditarEmpleado">
+          <div class="modal-body">
+            <input type="hidden" id="idEmpleadoMod" name="id_empleado">
+            <div class="row g-3">
+              <input type="hidden" id="idPersonaMod" name="idPersonaMod">
+
+              <div class="col-md-4">
+                <label for="nombreEmpleadoMod" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreEmpleadoMod" name="nombre" required>
+              </div>
+              <div class="col-md-4">
+                <label for="apellidoPatEmpleadoMod" class="form-label">Apellido Paterno</label>
+                <input type="text" class="form-control" id="apellidoPatEmpleadoMod" name="apellido_paterno" required>
+              </div>
+              <div class="col-md-4">
+                <label for="apellidoMatEmpleadoMod" class="form-label">Apellido Materno</label>
+                <input type="text" class="form-control" id="apellidoMatEmpleadoMod" name="apellido_materno" required>
+              </div>
+              <div class="col-md-4">
+                <label for="fechaNacEmpleadoMod" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacEmpleadoMod" name="fecha_nacimiento" required>
+              </div>
+              <div class="col-md-4">
+                <label for="direccionEmpleadoMod" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccionEmpleadoMod" name="direccion" required>
+              </div>
+              <div class="col-md-4">
+                <label for="cpEmpleadoMod" class="form-label">Código Postal</label>
+                <input type="text" class="form-control" id="cpEmpleadoMod" name="codigo_postal" required>
+              </div>
+              <div class="col-md-4">
+                <label for="telefonoEmpleadoMod" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="telefonoEmpleadoMod" name="telefono" required>
+              </div>
+              <div class="col-md-4">
+                <label for="correoEmpleadoMod" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="correoEmpleadoMod" name="correo" required>
+              </div>
+              <div class="col-md-4">
+                <label for="contrasenaEmpleadoMod" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasenaEmpleadoMod" name="contrasena" required>
+              </div>
+              <div class="col-md-4">
+                <label for="rolEmpleadoMod" class="form-label">Rol</label>
+                <select class="form-select" id="rolEmpleadoMod" name="rol" required>
+                  <option value="Administrador">Administrador</option>
+                  <option value="Capturista">Capturista</option>
+                  <option value="Veterinario">Veterinario</option>
+                  <option value="Rescatista">Rescatista</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="generoEmpleadoMod" class="form-label">Género</label>
+                <select class="form-select" id="generoEmpleadoMod" name="genero" required>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+               <div class="col-md-4">
+  <label for="fotoEmpleadoMod" class="form-label">Foto (opcional)</label>
+  <input type="file" class="form-control" id="fotoEmpleadoMod" name="fotoEmpleadoMod" accept="image/*">
+</div>
+
+  <div class="col-md-4">
+                <label for="centroEmpleado" class="form-label">Centro</label>
+                <select class="form-select" id="centroMod" name="centroEmpleado" required>
+                  <option disabled selected>Selecciona un centro</option>
+
+                </select>
+              </div>
+              <div class="col-md-4 text-center">
+                <label class="form-label d-block">Foto actual</label>
+                <img id="fotoEmpleadoVistaMod" src="#" class="img-fluid rounded border" style="max-height: 150px;"
+                  alt="Foto actual">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary" ><i class='bx bxs-save'></i> Guardar Cambios</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="eliminarEmpleado" tabindex="-1" aria-labelledby="eliminarEmpleado" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="modalEliminarEmpleadoLabel"><i class='bx bxs-user-minus'></i> Eliminar Empleado
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <form id="formEliminarEmpleado">
+          <div class="modal-body">
+            <input type="hidden" id="idEmpleadoEliminar" name="id_empleado">
+            <p class="mb-0">¿Estás seguro que deseas eliminar al empleado <strong id="nombreEmpleadoEliminar"></strong>?
+            </p>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger"><i class='bx bxs-trash-alt'></i> Eliminar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Información Empleado -->
+  <div class="modal fade" id="infoEmpleado" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header text-white" style="background: linear-gradient(135deg, #3b82f6, #6366f1);">
+          <h5 class="modal-title d-flex align-items-center gap-2">
+            <i class='bx bxs-user-detail fs-4'></i> Información Completa del Empleado
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <div class="row">
+
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="text-center">
+                <img id="infoFoto" src="../img/fotoPrueba.jpg" class="img-fluid rounded-circle shadow mb-3"
+                  style="width: 200px; height: 200px; object-fit: cover;">
+
+                <h4 id="infoNombreEmpleado" class="fw-bold mb-1"></h4>
+                <p class="text-muted mb-3" id="infoRolCabecera"></p>
+
+
+                <div class="d-flex justify-content-center gap-2 mb-3">
+                  <span class="badge py-2 px-3 rounded-pill" id="infoEstatus">
+                    <i class='bx bx-info-circle me-1'></i> <span id="infoEstatusTexto"></span>
+                  </span>
+
+                  <span class="badge bg-secondary py-2 px-3 rounded-pill">
+                    <i class='bx bx-id-card me-1'></i> <span id="infoCodigo"></span>
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="col-md-8">
+              <div class="row g-3">
+                <div class="col-12">
+                  <h5 class="fw-bold border-bottom pb-2 mb-3">Datos Personales</h5>
+                </div>
+                <!-- Aqui teams va el nombre completo -->
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Nombre completo</label>
+                  <p class="fw-bold" id="infoNombre"></p>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Fecha de nacimiento</label>
+                  <p class="fw-bold" id="infoFecha"></p>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Género</label>
+                  <p class="fw-bold" id="infoGenero"></p>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Teléfono</label>
+                  <p class="fw-bold" id="infoTelefono"></p>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label text-muted small">Dirección</label>
+                  <p class="fw-bold" id="infoDireccion"></p>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Código Postal</label>
+                  <p class="fw-bold" id="infoCodigoPostal"></p>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Correo electrónico</label>
+                  <p class="fw-bold" id="infoCorreo"></p>
+                </div>
+
+                <div class="col-12 mt-4">
+                  <h5 class="fw-bold border-bottom pb-2 mb-3">Información Laboral</h5>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Rol</label>
+                  <p class="fw-bold" id="infoRol"></p>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Centro asignado</label>
+                  <p class="fw-bold" id="infoCentro"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer justify-content-center border-top-0">
+          <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">
+            <i class='bx bx-check-circle me-2'></i> Entendido
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/Gestiones/BarraNavegacion.js"></script>
+  <script src="../JS/Gestiones/GestionEmpleados.js"></script>
+  <script src="../JS/Header/empleado.js"></script>
+</body>
+
+</html>

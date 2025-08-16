@@ -1,0 +1,181 @@
+
+<html>
+
+<head>
+    <title>Afiliacion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <!-- Tu header.css -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/Header/header.css">
+    <link rel="stylesheet" href="CSS/Footer/footer.css">
+    <link rel="stylesheet" href="CSS/Afiliacion/afiliacion.css">
+
+</head>
+
+<body class="bg-general">
+ <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
+    <div class="container-fluid">
+    
+        <a class="navbar-brand imagenLogo" href="#">
+        <img src="iconos/icon.png" alt="Logo" width="65" height="65">
+      </a>
+
+  
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <div class="navbar-nav mx-auto text-center">
+          <a class="nav-link active" href="inicioAdopciones.html">Adopciones</a>
+          <a class="nav-link" href="Donaciones.html">Donaciones</a>
+          <a class="nav-link" href="Afiliaciones.html">Afiliación</a>
+          <a class="nav-link" href="QuienesSomos.html">¿Quiénes somos?</a>
+          <a class="nav-link" href="Empleados/loginEmpleados.html" id="btnEmpleado">Empleados</a>
+        </div>
+        <span class="navbar-text perfil d-flex align-items-center" id="usuario">
+          <a class="nav-link" href="Login.html">Iniciar sesión / Crear cuenta</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+</header>
+   
+    <main class="container my-5 afiliacion-section ">
+        <h1 class="titulo-seccion text-center mb-4 mx-auto">¡Únete a la familia Huellitas Suaves!</h1>
+
+        <p class="texto-intro mx-auto mb-4 text-center">
+            La afiliación es completamente <strong>gratuita</strong>. Al formar parte de nuestra comunidad,
+            recibirás noticias, invitaciones a eventos y muchas otras cosas mas.
+            <br><br>
+            Si deseas apoyar con una aportación económica, ¡puedes hacerlo más adelante!
+        </p>
+
+        <!-- Formulario -->
+        <section class="formularioAfiliaciones py-5">
+            <div class="container">
+  <h2 class="text-center fw-bold margenFormulario">Unete a la familia</h2>
+            <form id="formAfiliacion" class="mx-auto formulario-afiliacion">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="mascotas" class="form-label">¿Tienes mascotas actualmente?</label>
+                            <select id="mascotas" class="form-select" required>
+                                <option selected disabled value="">Selecciona una opción</option>
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                                <option value="otros">Otros animales</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mascotas" class="form-label">¿Con que frecuencia puedes apoyar?</label>
+                            <select id="frecuenciaAyuda" class="form-select" required>
+                                <option selected disabled value="">Selecciona una opción</option>
+                                <option value="opcionUnaVez">Una vez</option>
+                                <option value="opcionSemanal">Semanal</option>
+                                <option value="opcionMensual">Mensual</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Disponibilidad de horario</label>
+                            <input type="text" class="form-control" id="disponibilidad">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="mascotas" class="form-label">Tipo de apoyo</label>
+                            <select id="tipoApoyo" class="form-select" required>
+                                <option selected disabled value="">Selecciona una opción</option>
+                                <option value="Voluntariado">Voluntariado</option>
+                                <option value="Donaciones">Donaciones</option>
+                                <option value="Rescate">Rescate</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mascotas" class="form-label">Medio de contacto preferido</label>
+                            <select id="medioContacto" class="form-select" required>
+                                <option selected disabled value="">Selecciona una opción</option>
+                                <option value="opcionWhatsapp">Whatsapp</option>
+                                <option value="opcionTelefono">Telefono</option>
+                                <option value="opcionCorreo">Correo</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <p>¿Desea que lo contactemos?</p>
+                                <input class="form-check-input" type="radio" name="radioDefault" id="contactar">
+                                <label class="form-check-label" for="radioDefault1">
+                                    !Si contactenme!
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="noContactar">
+                                <label class="form-check-label" for="radioDefault2">
+                                    No, gracias
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="mensaje" class="form-label">Mensaje o comentarios (opcional)</label>
+                        <textarea id="mensaje" class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-unirme px-5">Unirme</button>
+                    </div>
+            </form>
+            </div>
+        </section>
+        <div class="text-center mt-5">
+            <p class="text-secondary">
+                ¿Ya eres parte y quieres hacer una donación? Visita nuestra sección de Donaciones.
+            </p>
+        </div>
+    </main>
+    <footer class="container-fluid  p-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="text-center text-light textosFooter ">
+        <span>Derechos reservados</span>
+        <span class="mx-2">|</span>
+        <span>Términos de servicio</span>
+        <span class="mx-2">|</span>
+        <span>2025 Todos los derechos reservados</span>
+      </div>
+
+      <div class="iconos d-flex gap-4">
+        <a><img src="iconos/redesSocialesIconos/fb_icon.svg" width="20"></a>
+        <a><img src="iconos/redesSocialesIconos/instagram_icono.svg" width="20"></a>
+        <a><img src="iconos/redesSocialesIconos/twitter_icono.svg" width="20"></a>
+        <a><img src="iconos/redesSocialesIconos/whatsapp_icono.svg" width="20"></a>
+      </div>
+    </div>
+  </footer>
+    <script src="JS/Afiliacion/Afiliacion.js" type="text/javascript"></script>
+    <link href="CSS/Afiliacion/Afiliacion.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="JS/Header/Usuario.js"></script>
+  <script src="JS/Login/loginAdoptantes.js"></script>
+</body>
+
+</html>

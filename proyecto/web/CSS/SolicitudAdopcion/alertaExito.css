@@ -1,0 +1,22 @@
+/* Botón personalizado para Swal */
+.boton-confirmacion-adopcion {
+  background-color: #CBBFA3 !important;  /* beige-dun */
+  color: #4b3f2f !important;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 4px 10px rgba(203, 191, 163, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.boton-confirmacion-adopcion:hover {
+  background-color: #b3a67f !important;
+}
+
+/* Popup general */
+.popup-adopcion {
+  border-radius: 1rem !important;
+  box-shadow: 0 0 25px rgba(203, 191, 163, 0.5);
+  font-family: 'Roboto', sans-serif;
+}

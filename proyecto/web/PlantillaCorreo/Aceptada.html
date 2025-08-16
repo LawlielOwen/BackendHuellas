@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud Aprobada - Huellitas Suaves</title>
+    <style>
+        /* Reset y protección modo oscuro */
+        :root { color-scheme: light only; }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #FFF8F2 !important;
+            color: #444444 !important;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #FFFFFF !important;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .header {
+            background-color: #A4A17E !important;
+            color: #FFFFFF !important;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 8px solid #8a8869;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 30px;
+            color: #444444;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .highlight-box {
+            background-color: #f8f8f8 !important;
+            border-left: 5px solid #A4A17E;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .pet-name {
+            color: #000000;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            border-bottom: 2px solid #A4A17E;
+            padding-bottom: 3px;
+        }
+        
+        .footer {
+            background-color: #000000 !important;
+            color: #FFFFFF !important;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #A4A17E !important;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .celebrate-emoji {
+            font-size: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        @media screen and (max-width: 480px) {
+            .header, .content {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>¡Hola ${adoptante.nombre}!</h1>
+        </div>
+        
+        <div class="content">
+            <div class="highlight-box">
+                <p style="margin-top: 0;"><span class="celebrate-emoji">🎉</span> ¡Buenas noticias! Tu solicitud para adoptar a <span class="pet-name">${animal.nombre}</span> <strong>ha sido aprobada</strong>.</p>
+                <p style="margin-bottom: 0;">Por favor contacta al refugio en los próximos 3 días hábiles para coordinar los detalles finales de la adopción.</p>
+            </div>
+            
+            <p><strong>Datos de contacto:</strong><br>
+            Teléfono: (55) 1234-5678<br>
+            Horario: Lunes a Viernes de 10:00 a 18:00 hrs</p>
+            
+            <p>¡Prepárate para recibir a tu nuevo compañero! Estamos seguros que ${animal.nombre} encontrará en ti un hogar lleno de amor.</p>
+            
+            <p style="margin-bottom: 0;">Con alegría,<br>El equipo de Huellitas Suaves</p>
+        </div>
+        
+        <div class="footer">
+            <p style="margin-top: 0;">Huellitas Suaves - Centro de Adopción Animal</p>
+            <p style="margin: 10px 0;">
+                <a href="mailto:contacto@huellitassuaves.org">contacto@huellitassuaves.org</a> | Tel: (55) 1234-5678
+            </p>
+        </div>
+    </div>
+</body>
+</html>

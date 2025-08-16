@@ -1,0 +1,248 @@
+.table-responsive {
+   width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100% !important;
+    margin-top: 5px;
+    min-width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, th {
+    min-width: 80px;
+}
+
+.contenedorPrincipal table.tablaGestiones td {
+    overflow: auto;
+    height: 70px;
+    font-size: 14px;
+    text-align: center;
+    color: #677788;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    transition: background 0.2s ease-in-out;
+    font-weight: 500;
+    vertical-align: middle;
+    padding: 8px 10px;
+     word-break: break-word;
+      overflow-x: auto; 
+}
+
+
+.contenedorPrincipal table.tablaGestiones img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.contenedorPrincipal table.tablaGestiones .mascotasCol{
+    min-width: 100px;
+    max-width: 200px;
+    white-space: normal;
+    font-weight: 600;
+    color: black;
+    word-break: break-word;
+}
+.contenedorPrincipal table.tablaGestiones .mascotasCol span {
+    display: flex;
+    align-items: center;
+    white-space: normal; 
+    overflow: visible;
+    text-overflow: initial;
+     flex-wrap: wrap;
+     width: 100%; 
+    
+}
+.contenedorPrincipal table.tablaGestiones tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.contenedorPrincipal table.tablaGestiones th {
+    background-color: #f8fafd;
+    height: 55px;
+    text-align: center;
+    color: #3b3d3e;
+    border-top:1px solid rgba(231, 234, 243, .7);
+
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.contenedorPrincipal table.tablaGestiones th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.contenedorPrincipal table.tablaGestiones th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.contenedorPrincipal table.tablaGestiones tbody tr:nth-child(even) td {
+    background-color: #FDF9F3;
+}
+
+.contenedorPrincipal table.tablaGestiones tbody tr:nth-child(odd) td {
+    background-color: transparent;
+}
+
+.contenedorPrincipal table.tablaGestiones tbody tr:hover td {
+    background-color: #f4f1e9;
+    cursor: pointer;
+}
+
+.contenedorPrincipal .agregarBoton {
+    background-color: #A4A57E;
+    color: white;
+    padding: 8px 18px;
+    font-size: 16x;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contenedorPrincipal .agregarBoton:hover {
+    background-color: #212529;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tabla-con-boton .agregarBoton {
+    margin-bottom: 10px;
+    display: block;
+
+}
+
+.activado {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.inactivo {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+.tabla-scroll {
+    max-height: 60vh;  /* Puedes ajustar el valor según necesidad */
+    overflow-y: auto;
+  
+}
+
+/* Para mantener la paginación visible al hacer scroll */
+nav[aria-label="Page navigation"] {
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 20;
+   
+}
+
+
+
+
+
+@media (max-width: 992px) {
+    table.tablaGestiones td,
+    table.tablaGestiones th {
+        font-size: 12px;
+        padding: 8px;
+    }
+    
+    table.tablaGestiones .mascotasCol {
+        width: 140px;
+    }
+    
+    table.tablaGestiones img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    table.tablaGestiones {
+        min-width: 650px; 
+    }
+    
+    table.tablaGestiones td {
+        height: 55px;
+        font-size: 13px;
+        max-width: 120px;
+    }
+    
+    table.tablaGestiones th {
+        font-size: 13px;
+        height: 45px;
+    }
+    
+    table.tablaGestiones .mascotasCol {
+        width: 120px;
+    }
+    
+    table.tablaGestiones img {
+        width: 30px;
+        height: 30px;
+    }
+}
+@media (max-width:768px){
+      .contenedorPrincipal table.tablaGestiones .mascotasCol {
+        min-width: 120px;
+        max-width: 150px; 
+    }
+    
+    .contenedorPrincipal table.tablaGestiones .mascotasCol span {
+        white-space: normal; 
+        overflow: visible; 
+        text-overflow: clip; 
+    }
+    
+    .contenedorPrincipal table.tablaGestiones img {
+        width: 28px; 
+        height: 28px;
+        margin-right: 6px;
+    }
+}
+@media (max-width: 576px) {
+    .contenedorPrincipal table.tablaGestiones td,
+    .contenedorPrincipal table.tablaGestiones th {
+        font-size: 10px;
+        padding: 6px 4px;
+        word-break: break-word;
+    }
+
+    .contenedorPrincipal table.tablaGestiones .mascotasCol span {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenedorPrincipal table.tablaGestiones img {
+        width: 26px;
+        height: 26px;
+        margin-bottom: 4px;
+    }
+}

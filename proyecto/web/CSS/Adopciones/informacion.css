@@ -1,0 +1,54 @@
+
+.fas {
+  font-size: 12px;
+}
+
+
+.modal-content {
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.g-0 {
+  --bs-gutter-x: 0;
+}
+
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.lh-base {
+  line-height: 1.6;
+}
+
+.lh-lg {
+  line-height: 1.75;
+}
+
+.headerModal {
+  background-color: #D3CBB8;
+}
+
+.imagen {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-3 {
+  border-radius: 0.75rem !important;
+}
+
+.rounded-4 {
+  border-radius: 1rem !important;
+}

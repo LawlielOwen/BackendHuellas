@@ -1,0 +1,372 @@
+
+/* ================== BASE ================== */
+body {
+    background-color: #FCE7C8;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ================== PLACEHOLDER ================== */
+::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ================== (IMAGEN DE FONDO) ================== */
+.hero-container {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.imagenFondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../../img/labradorFondo.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ================== TEXTOS SOBRE LA IMAGEN ================== */
+.textosImagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.titulo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ================== BUSCADOR ================== */
+.buscador {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 45px;
+    background-color: white;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+input.form-control {
+    border: none;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+input.form-control:focus {
+    box-shadow: none;
+    border-color: none;
+}
+
+/* Estilos para el botón de buscar */
+.botonBuscar {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+
+.barritas {
+    background-color: white;
+}
+
+
+
+/* ==================== Rescates Recientes ================= */
+.separador {
+    width: 200px;
+    height: 2px;
+    background-color: #A4A57E;
+    margin-top: 35px;
+}
+
+.tituloRescates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+.cartaAnimal {
+    width: 200px;
+    height: 360px;
+    background-color: white;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.cartaAnimal:hover{
+    transition: ease-in-out 0.3s;
+    transform: translateY(-5px);
+}
+.card-img-top {
+    width: 170px;       
+    height: 170px;     
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto 0 auto;
+}
+.cartaAnimal .card-img-top {
+  transition: ease-out 0.3s; 
+}
+
+.cartaAnimal:hover .card-img-top {
+  transition: ease-in 0.3s;
+  transform: scale(1.05);
+}
+.info{
+margin-top: -10px;
+}
+.card-text{
+font-size: 12px;
+color: #757575;
+margin-top: -5px;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.categoria{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 30%;
+height: 25px;
+font-size: 13px;
+background-color: #CBBFA3;
+color: black;
+border-radius: 8px;
+margin-top: -6px;
+}
+.button-carta {
+    background-color:  #d1bea7; 
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 16px;
+    margin-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-carta:hover {
+    background-color: #A9917A; 
+    color: white;
+}
+.imgInfo{
+    width: 250px;
+    height: 250px;
+}
+.botonF{
+font-family: 'Inter', sans-serif;
+    background-color: #A4A57E;
+    color: #FFFFFF;
+    width: 100%;
+}
+.botonF:hover{
+
+    background-color: #9DB58F;
+    color: white;
+}
+.cartitas{
+    margin-bottom: 50px;
+}
+.modal-content {
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.g-0 {
+  --bs-gutter-x: 0;
+}
+
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.lh-base {
+  line-height: 1.6;
+}
+
+.lh-lg {
+  line-height: 1.75;
+}
+
+.headerModal {
+  background-color: #D3CBB8;
+}
+
+.imagen {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-3 {
+  border-radius: 0.75rem !important;
+}
+
+.rounded-4 {
+  border-radius: 1rem !important;
+}
+@media (max-width: 767.98px) {
+ .seccionPerros,
+  .seccionGatos {
+    width: 320px;
+    max-width: 90vw;
+    margin: 0;
+  }
+  .tituloSeccion {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+   .hero-container {
+    min-height: 320px;
+    padding-bottom: 40px;
+  }
+  .imagenFondo {
+    min-height: 320px;
+    height: 320px;
+  }
+  .textosImagen .titulo {
+    font-size: 22px;
+  }
+  .textosImagen .subtitulo {
+  display: none !important;
+  }
+    .textosImagen {
+   top: 60%;
+   transform: translate(-50%, -40%);
+  }
+   .buscador {
+
+    width: 92%;
+    min-width: 0;
+    border-radius: 10px;
+    height: 45px;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.1);
+    margin: 0;
+  }
+  .buscador input.form-control {
+    font-size: 15px;
+  }
+    .cartaAnimal {
+    width: 90vw;
+    max-width: 320px;
+    height: 340px;
+    margin: 0 auto 20px auto;
+  }
+  .card-img-top {
+    width: 80vw;
+    max-width: 200px;
+    height: 170px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  .hero-container {
+    min-height: 340px;
+    padding-bottom: 40px;
+  }
+  .imagenFondo {
+    min-height: 340px;
+    height: 340px;
+  }
+  .textosImagen .titulo {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .textosImagen .subtitulo {
+    font-size: 13px;
+    display: block !important;
+  }
+  .textosImagen {
+    top: 60%;
+    transform: translate(-50%, -40%);
+    padding: 0 20px;
+  }
+  .buscador {
+    width: 70%;
+    min-width: 0;
+    border-radius: 10px;
+    height: 45px;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.1);
+    margin: 0;
+  }
+
+  .seccionPerros,
+  .seccionGatos {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 24px;
+    padding-left: 24px;
+  }
+  .tituloSeccion {
+    text-align: left;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .secciones-row {
+    gap: 32px;
+  }
+  .cartitas .row {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Obliga a 2 columnas */
+    gap: 60px 30px; /* 60px horizontal / 40px vertical (ajusta según necesites) */
+
+  }
+
+  .cartaAnimal {
+    width: 280px;
+    max-width:280px;
+    height: 370px;
+ margin: 0 !important;
+  
+  }
+
+  .card-img-top {
+    width: 80%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+ 
+}

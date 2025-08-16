@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Solicitud en Revisión - Huellitas Suaves</title>
+    <style type="text/css">
+        /* Reset para clientes de email */
+        body, html {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            font-family: 'Segoe UI', Arial, sans-serif !important;
+            -webkit-text-size-adjust: 100% !important;
+            -ms-text-size-adjust: 100% !important;
+        }
+        
+        /* Forzar colores originales */
+        :root {
+            color-scheme: light only;
+            supported-color-schemes: light only;
+        }
+        
+        body {
+            background-color: #FFF8F2 !important;
+            color: #444444 !important;
+            padding: 20px 10px !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            min-height: 100vh !important;
+            box-sizing: border-box !important;
+        }
+        
+        /* Contenedor principal */
+        .email-container {
+            max-width: 600px !important;
+            width: 100% !important;
+            background-color: #FFFFFF !important;
+            border-radius: 12px !important;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08) !important;
+            overflow: hidden !important;
+            margin: 0 auto !important;
+        }
+        
+        /* Cabecera */
+        .header {
+            background-color: #A4A17E !important;
+            color: #FFFFFF !important;
+            padding: 25px 15px !important;
+            text-align: center !important;
+            border-bottom: 8px solid #8a8869 !important;
+        }
+        
+        .header h1 {
+            margin: 0 !important;
+            font-size: 24px !important;
+            font-weight: 600 !important;
+            line-height: 1.3 !important;
+            word-wrap: break-word !important;
+        }
+        
+        /* Contenido */
+        .content {
+            padding: 25px 20px !important;
+            color: #444444 !important;
+            font-size: 16px !important;
+            line-height: 1.6 !important;
+            word-wrap: break-word !important;
+        }
+        
+        .highlight-box {
+            background-color: #f8f8f8 !important;
+            border-left: 5px solid #A4A17E !important;
+            padding: 18px !important;
+            border-radius: 8px !important;
+            margin: 20px 0 !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+        }
+        
+        .pet-name {
+            color: #000000 !important;
+            font-weight: bold !important;
+            font-size: 18px !important;
+            display: inline-block !important;
+            border-bottom: 2px solid #A4A17E !important;
+            padding-bottom: 3px !important;
+            margin-bottom: 10px !important;
+        }
+        
+        /* Pie de página */
+        .footer {
+            background-color: #000000 !important;
+            color: #FFFFFF !important;
+            text-align: center !important;
+            padding: 18px 10px !important;
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+        }
+        
+        .footer a {
+            color: #A4A17E !important;
+            text-decoration: none !important;
+            font-weight: 500 !important;
+            word-wrap: break-word !important;
+        }
+        
+        /* Estilos específicos para móviles */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 10px 5px !important;
+                display: block !important;
+            }
+            
+            .email-container {
+                border-radius: 10px !important;
+            }
+            
+            .header {
+                padding: 20px 10px !important;
+            }
+            
+            .header h1 {
+                font-size: 22px !important;
+            }
+            
+            .content {
+                padding: 20px 15px !important;
+                font-size: 15px !important;
+            }
+            
+            .highlight-box {
+                padding: 15px !important;
+                margin: 15px 0 !important;
+            }
+            
+            .pet-name {
+                font-size: 16px !important;
+            }
+            
+            .footer {
+                padding: 15px 10px !important;
+                font-size: 12px !important;
+            }
+        }
+        
+        /* Correcciones específicas para Outlook */
+        .ExternalClass {
+            width: 100%;
+        }
+        
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+    </style>
+</head>
+<body style="margin:0; padding:0; width:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+    <!--[if (gte mso 9)|(IE)]>
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td>
+    <![endif]-->
+    
+    <div class="email-container" style="max-width:600px; width:100%; margin:0 auto;">
+        <!-- Cabecera -->
+        <div class="header" style="background-color:#A4A17E; color:#FFFFFF; padding:25px 15px; text-align:center; border-bottom:8px solid #8a8869;">
+            <h1 style="margin:0; font-size:24px; font-weight:600; line-height:1.3;">¡Gracias por tu solicitud, ${adoptante.nombre}!</h1>
+        </div>
+        
+        <!-- Contenido principal -->
+        <div class="content" style="padding:25px 20px; color:#444444; font-size:16px; line-height:1.6;">
+            <p style="margin:0 0 15px 0;">Hemos recibido tu solicitud para adoptar a <span class="pet-name" style="color:#000000; font-weight:bold; font-size:18px; display:inline-block; border-bottom:2px solid #A4A17E; padding-bottom:3px; margin-bottom:10px;">${animal.nombre}</span>.</p>
+            
+            <div class="highlight-box" style="background-color:#f8f8f8; border-left:5px solid #A4A17E; padding:18px; border-radius:8px; margin:20px 0; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+                <p style="margin:0 0 10px 0;">Estamos revisando tu información cuidadosamente. Este proceso puede tardar de <strong>3 a 5 días hábiles</strong>.</p>
+                <p style="margin:0;">Te notificaremos por correo electrónico una vez que se haya completado la revisión.</p>
+            </div>
+            
+            <p style="margin:0 0 15px 0;">Mientras tanto, puedes preparar tu hogar para recibir a tu nuevo compañero. Si tienes alguna pregunta, no dudes en contactarnos.</p>
+            
+            <p style="margin:0 0 15px 0;">¡Gracias por confiar en <strong>Huellitas Suaves</strong> y por brindarle una oportunidad a un nuevo amigo!</p>
+            
+            <p style="margin:0;">Con cariño,<br>El equipo de Huellitas Suaves</p>
+        </div>
+        
+        <!-- Pie de página -->
+        <div class="footer" style="background-color:#000000; color:#FFFFFF; text-align:center; padding:18px 10px; font-size:13px; line-height:1.5;">
+            <p style="margin:0 0 10px 0;">Huellitas Suaves - Centro de Adopción Animal</p>
+            <p style="margin:0 0 10px 0;">
+                <a href="mailto:contacto@huellitassuaves.org" style="color:#A4A17E; text-decoration:none; font-weight:500;">contacto@huellitassuaves.org</a> | Tel: (55) 1234-5678
+            </p>
+            <p style="margin:0; font-size:11px;">
+                © 2023 Huellitas Suaves. Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+    
+    <!--[if (gte mso 9)|(IE)]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+</body>
+</html>

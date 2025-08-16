@@ -1,0 +1,91 @@
+/* Contenedor principal de la paginación */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* Estilos base de la paginación */
+.pagination {
+    --bs-pagination-active-bg: #A4A57E; 
+    --bs-pagination-active-border-color: #A4A57E;
+    --bs-pagination-color: #5E503F; 
+    --bs-pagination-hover-color: #3A3328; 
+    --bs-pagination-hover-bg: #F3EFE0; 
+    --bs-pagination-focus-bg: #F3EFE0;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.15rem rgba(164, 165, 126, 0.25);
+    --bs-pagination-disabled-color: #CBBFA3; 
+    gap: 0.5rem; 
+}
+
+
+.pagination .page-item .page-link {
+    border: none;
+    border-radius: 50% !important; 
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.pagination .page-item:not(.active):not(.disabled) .page-link:hover {
+    background-color: #E0D8C0 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Item activo */
+.pagination .page-item.active .page-link {
+    font-weight: 600;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(164, 165, 126, 0.3);
+}
+
+/* Flechas de navegación */
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    border-radius: 20px !important; /* Forma ovalada para las flechas */
+    width: auto;
+    padding: 0 15px;
+    background-color: #F8F5EC;
+}
+
+/* Iconos de flechas */
+.pagination .page-item:first-child .page-link::before {
+    content: "←";
+    margin-right: 5px;
+}
+
+.pagination .page-item:last-child .page-link::after {
+    content: "→";
+    margin-left: 5px;
+}
+
+/* Estado deshabilitado */
+.pagination .page-item.disabled .page-link {
+    opacity: 0.6;
+    background-color: #F8F5EC !important;
+}
+
+/* Efecto para pantallas pequeñas */
+@media (max-width: 576px) {
+    .pagination {
+        gap: 0.25rem;
+    }
+    
+    .pagination .page-item .page-link {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .pagination .page-item:first-child .page-link,
+    .pagination .page-item:last-child .page-link {
+        padding: 0 10px;
+    }
+}

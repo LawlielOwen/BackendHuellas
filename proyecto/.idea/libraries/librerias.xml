@@ -1,0 +1,43 @@
+<component name="libraryTable">
+  <library name="librerias">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/librerias/jersey-container-servlet-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/javassist-3.25.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jersey-server.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/org.osgi.core-6.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/control_huellas.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/yasson-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.validation-api-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/hk2-utils-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/hk2-api-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.json.bind-api-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.inject-api-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/gson-2.13.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jersey-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.json-2.0.0-module.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.ws.rs-api-3.0.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jersey-client.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.mail-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jersey-media-json-binding.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.ws.rs-api-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/gson-2.13.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.annotation-api-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jersey-media-sse.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.activation-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.xml.bind-api-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jersey-hk2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/aopalliance-repackaged-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/osgi-resource-locator-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.json-api-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/hk2-locator-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.servlet-api-5.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jersey-container-servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/mysql-connector-java-8.0.26.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jakarta.persistence-api-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/gson-2.13.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/jersey-media-jaxb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

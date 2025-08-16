@@ -1,0 +1,22 @@
+
+.modal-footer {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem; 
+  flex-wrap: wrap;
+  padding: 1rem; 
+}
+
+
+@media (max-width: 576px) {
+  .modal-footer .btn {
+    flex: 1 1 100%; 
+    max-width: 300px; 
+  }
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  .modal-footer .btn {
+    flex: 1 1 45%;
+    max-width: 300px;
+  }
+}

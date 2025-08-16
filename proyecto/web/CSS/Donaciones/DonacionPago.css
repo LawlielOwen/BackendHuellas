@@ -1,0 +1,191 @@
+/* Estilo base para la página */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+   background: #FDE3BD;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal con layout de dos columnas */
+.donation-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+margin-top: 80px;
+  background: #FDE3BD;
+margin-bottom: 20px;
+  border-radius: 18px;
+  overflow: hidden;
+  align-items: stretch; /* <-- Asegura que ambas columnas tengan misma altura */
+}
+
+/* Columna izquierda: Contenedor de la imagen */
+/* Contenedor de imagen con color */
+.donation-image-container {
+  flex: 1.25;
+  background: trasparent; /* Color arena claro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Marco decorativo opcional */
+.donation-image-container::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 2px dashed #D4A76A; /* Borde decorativo */
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+/* Estilo de la imagen principal */
+.donation-image-container img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: transparent; /* Fondo por si la imagen tiene transparencia */
+  padding: 10px; /* Espacio entre imagen y borde interior */
+}
+/* Columna derecha: Formulario */
+.donation-form {
+  flex: 1;
+  padding: 3rem 2rem 2rem 2rem;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+/* Título del formulario */
+.donation-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.1rem;
+  color: #222;
+  text-align: center;
+}
+
+/* Etiquetas de los campos */
+.donation-form label {
+  display: block;
+  margin: 0.7rem 0 0.2rem 0.1rem;
+}
+
+/* Botones y campo de importe */
+.amount-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Botones de monto predefinido */
+.amount-btn {
+  background: #b1c29e;
+  color: #222;
+  border: none;
+  border-radius: 24px;
+  padding: 0.5rem 1.4rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.amount-btn:hover,
+.amount-btn.selected {
+  background: #373a33;
+  color: #fff;
+}
+
+/* Campo para monto personalizado */
+.amount-input {
+  width: 8em;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  margin-left: 0.3rem;
+}
+
+/* Opciones de periodicidad */
+.frequency-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  align-items: center;
+}
+
+/* Entradas de texto */
+.donation-form input[type="text"],
+.donation-form input[type="email"],
+.donation-form input[type="number"] {
+  width: 100%;
+  padding: 0.52rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccd0d5;
+  border-radius: 8px;
+  background: #f7f8fa;
+  font-size: 1rem;
+}
+
+/* Radio buttons */
+.donation-form input[type="radio"] {
+  accent-color: #0d6efd;
+}
+
+/* Botón de donación */
+.donar-btn {
+  width: 100%;
+  background: #b1c29e;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 0;
+  font-size: 1.07rem;
+  margin: 1rem 0 0.5rem 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.donar-btn:hover {
+  background: #373a33;
+  color: #fff;
+}
+
+/* Texto adicional */
+.small-text {
+  font-size: 0.92em;
+  color: #555;
+  text-align: center;
+}
+
+/* Asterisco requerido */
+.required {
+  color: #f44336;
+}
+
+/* Diseño adaptable para móviles */
+@media (max-width: 900px) {
+  .donation-layout {
+    flex-direction: column;
+    margin: 30px 10px;
+  }
+
+  .donation-image,
+  .donation-image img {
+    height: auto;
+    max-height: 250px;
+    min-height: 200px;
+  }
+
+  .donation-form {
+    padding: 2rem 1.1rem;
+  }
+}

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="controller_huellas">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/controller_huellas/dist/controller_huellas.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,156 @@
+
+.contenedores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 20px 0 40px 0;
+    padding-top: 15px;
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding-left: 24px;
+}
+
+.titulo h4 {
+    font-size: 20px;
+}
+
+/* Botón de agregar */
+.botonAgregarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 10px;
+}
+
+.botonAgregar.btn {
+    background-color: #B9CBA5;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #b4bbc0;
+    padding: 10px 16px;
+    width: 125px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.botonAgregar:hover.btn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.adoptados, .disponibles {
+    border-radius: 6px;
+    box-shadow: 0px 6px 12px rgba(140, 152, 164, 0.075);
+    padding: 21px 21px;
+    background-color: #ffffff;
+    border-color: rgba(231, 234, 243, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 180px;
+    flex-shrink: 0;
+    height: 80px;
+    justify-content: center;
+    position: relative;
+}
+
+
+.adoptados h4, .disponibles h4 {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+ color: #677788;
+}
+
+.adoptadosOrden, .disponiblesOrden {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+#contadorAdoptados {
+    position: relative;
+    font-size: 17px;          
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    top: -10px;
+                 
+}
+
+.iconoConta, .iconoConta2 {
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra sutil */
+}
+.iconoConta{
+    background: linear-gradient(87deg, #11cdef 0, #1171ef 100%);
+
+}
+.iconoConta2{
+    background: linear-gradient(87deg, #f5365c 0, #f56036 100%);
+}
+.iconoConta img , .iconoConta2 img {
+    width: 32px;
+    height: 32px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 16px;  
+    width: 100%;
+
+    flex-wrap: wrap;
+}
+
+
+.adoptados, .disponibles {
+    width: 180px; 
+    flex-shrink: 0; 
+}
+@media (max-width: 768px) {
+    .contenedores{
+        justify-content: center;
+        padding-left: 20px;
+    }
+
+    .stats-container {
+        justify-content: center; 
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .adoptados,
+    .disponibles {
+        margin-bottom: 10px; 
+}
+}

@@ -1,0 +1,78 @@
+ /*
+#A4A17E  // Verde oliva        — Navbar, header
+#B1C29E  // Verde salvia claro — botones de inicio de sesión o hover
+#CBBFA3  // Beige dun          — Fondos secundarios
+#FDE3BD  // Trigo claro        — Fondo general de la interfaz
+#FFFFFF  // Blanco             — Formularios, inputs, fondo de tarjetas 
+#000000  // Negro              — Títulos,  texto principaly footer de la pagina 
+#E0E0E0  // Gris platino       — Bordes de inputs, separadores y texto secundario
+*/
+
+.email-body {
+    background-color: #FFF8F2;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-card {
+    max-width: 600px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* Encabezado */
+.email-header {
+    background-color: #A4A17E;
+    color: #FFFFFF;
+    padding: 25px;
+    text-align: center;
+   
+}
+
+.email-header h1 {
+    margin: 0;
+    font-size: 1.6em;
+}
+
+/* Contenido */
+.email-content {
+    padding: 25px 30px;
+    color: #444444;
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+.animal-name {
+    color: #000000;
+    font-weight: boLd;
+    font-size: 1.2em;
+}
+
+/* Caja resaltada */
+.highlight-box {
+    background-color:#f0f0f0 ;
+    border-left: 5px solid #A4A17E;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Pie de página */
+.email-footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #FFFFFF;
+    border-top: 1px solid #E0E0E0;
+}
+
+.email-footer a {
+    color: white;
+    text-decoration: none;
+}

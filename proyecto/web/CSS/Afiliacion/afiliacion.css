@@ -1,0 +1,161 @@
+:root {
+    --verde-oliva: #A4A17E;
+    --verde-salvia: #B1C29E;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #E0E0E0;
+    --trigo: #FDE3BD;
+}
+
+body {
+    background-color: var(--trigo);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+main {
+    margin-top: 85px; /* 65px (header) + 20px (espacio extra) */
+    padding-top: 40px; /* Espacio interno superior */
+    position: relative; /* Asegura posición normal */
+    z-index: 1; /* Por debajo del header */
+}
+.titulo-seccion {
+    
+    width: 60%;
+    color: var(--blanco);
+    background-color: var(--verde-oliva);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.texto-intro {
+    max-width: 700px;
+    color: var(--negro);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.formulario-afiliacion {
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--gris);
+    padding: 6px;
+    width: 100%;
+}
+
+.btn-unirme {
+    background-color: var(--verde-salvia);
+    color: var(--blanco);
+    padding: 8px 16px;
+    border: 1px solid var(--verde-salvia);
+    cursor: pointer;
+}
+
+.btn-unirme:hover {
+    background-color: var(--verde-oliva);
+    color: var(--blanco);
+}
+
+.footer-principal {
+    background-color: var(--verde-oliva);
+    color: var(--blanco);
+    text-align: center;
+    padding: 10px;
+}
+
+.formularioAfiliaciones {
+    position: relative;
+    left: 9.5%;
+    width: 80%;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+input.form-control:focus,
+select.form-select:focus,
+textarea.form-control:focus {
+    border: 1px solid transparent;
+  box-shadow: 0px 0px 0px 1px #242424;
+  background-color: transparent;
+}
+
+input.form-check-input:focus {
+      border: 1px solid transparent;
+  box-shadow: 0px 0px 0px 1px #242424;
+  background-color: transparent;
+}
+@media (max-width: 991.98px) {
+    .formulario-afiliacion {
+        padding: 0 15px;
+    }
+    
+    .formularioAfiliaciones {
+        padding: 20px 15px;
+    }
+    
+    /* Cambiamos a 2 columnas en tablet */
+    .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Ajustes para móvil (menos de 768px) */
+@media (max-width: 767.98px) {
+    .titulo-seccion {
+        width: 90%;
+        font-size: 1.5em;
+    }
+    
+    .texto-intro {
+        width: 90%;
+    }
+    
+    /* Cambiamos a 1 columna en móvil */
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .formulario-afiliacion {
+        margin-top: 30px;
+    }
+    
+    .formularioAfiliaciones {
+        padding: 15px 10px;
+    }
+    
+    main {
+        margin-top: 70px; /* Reduce el margen superior en móvil */
+    }
+}
+
+/* Ajustes adicionales para mejorar el responsive */
+@media (max-width: 575.98px) {
+    .textosFooter span {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .textosFooter span.mx-2 {
+        display: none;
+    }
+    
+    .btn-unirme {
+        width: 100%;
+    }
+}
