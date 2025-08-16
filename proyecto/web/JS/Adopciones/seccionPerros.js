@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   cargarCentros();
 });
 function cargarCentros() {
-  fetch("http://localhost:8080/ProyectoHuellas/api/centros/getAll")
+  fetch("/api/centros/getAll")
     .then(res => res.json())
     .then(data => {
       centros = data;
@@ -18,7 +18,7 @@ function cargarCentros() {
 
 function cargarMascotas() {
   mostrarCarga();
-  fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/getPerros")
+  fetch("/api/mascotas/getPerros")
     .then(res => res.json())
     .then(data => {
       animales = data;
@@ -214,7 +214,7 @@ document.getElementById("buscar").addEventListener("keydown", function (e) {
   }
 });
 function buscarMascotasPorNombre(nombre) {
-  fetch("http://localhost:8080/ProyectoHuellas/api/inicio/buscarPerro", {
+  fetch("/api/inicio/buscarPerro", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -238,7 +238,7 @@ function aplicarFiltros() {
   const genero = document.getElementById("filtroSexo").value;
   const tamano = document.getElementById("filtroTamano").value;
   const caracter = document.getElementById("filtroCaracter").value;
-  fetch("http://localhost:8080/ProyectoHuellas/api/inicio/filtroPerros", {
+  fetch("/api/inicio/filtroPerros", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -264,7 +264,7 @@ function aplicarFiltrosResponsive() {
   const genero = document.getElementById("filtroSexorRes").value;
   const tamano = document.getElementById("filtroTamanoRes").value;
   const caracter = document.getElementById("filtroCaracterRes").value;
-  fetch("http://localhost:8080/ProyectoHuellas/api/inicio/filtroPerros", {
+  fetch("/api/inicio/filtroPerros", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function cargarDonaciones() {
-    fetch("http://localhost:8080/ProyectoHuellas/api/donacion/getDonaciones")
+    fetch("/api/donacion/getDonaciones")
         .then(res => res.json())
         .then(data => {
             donaciones = data;
@@ -36,7 +36,7 @@ function cargarDonaciones() {
 }
 
 function cargarCount() {
-    fetch("http://localhost:8080/ProyectoHuellas/api/donacion/getContDonaciones")
+    fetch("/api/donacion/getContDonaciones")
         .then(res => res.json())
         .then(data => {
             let conteoDonaciones = 0;
@@ -53,7 +53,7 @@ function cargarCount() {
 }
 
 function CargarTotal() {
-    fetch("http://localhost:8080/ProyectoHuellas/api/donacion/getTotal")         
+    fetch("/api/donacion/getTotal")         
     .then(res => res.json())
     .then(data => {
         let totalDonaciones = 0; // Declarar aquí la variable

@@ -47,7 +47,7 @@ const nuevaSoli = {
     idAnimal: parseInt(window.idAnimal),
     idAdoptante: parseInt(window.idAdoptante),
 }
-fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/saveSolicitud", {
+fetch("/api/solicitudes/saveSolicitud", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

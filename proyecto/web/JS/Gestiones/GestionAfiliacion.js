@@ -1,4 +1,4 @@
-const urlBase = "http://localhost:8080/ProyectoHuellas/api/Afiliacion"; // Cambia según tu proyecto
+const urlBase = "/api/Afiliacion"; // Cambia según tu proyecto
 let afiliadosMemoria = []; // Guarda la lista actual para rellenar el modal de editar
 
 // --------- GETALL ---------

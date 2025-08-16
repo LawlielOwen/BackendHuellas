@@ -17,7 +17,7 @@ function LogIn() {
         contraseña: contra
     };
 
-    fetch('http://localhost:8080/ProyectoHuellas/api/empleadosLogin/validar', {
+    fetch('http://localhost:8080/api/empleadosLogin/validar', {
         method: 'POST',
         headers: {
              "Content-Type": "application/json; charset=UTF-8"

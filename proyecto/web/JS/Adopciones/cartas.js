@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 function cargarCentros() {
-  fetch("http://localhost:8080/ProyectoHuellas/api/centros/getAll")
+  fetch("/api/centros/getAll")
     .then(res => res.json())
     .then(data => {
       centros = data;
@@ -16,7 +16,7 @@ function cargarCentros() {
 
 function cargarMascotas() {
   mostrarCarga();
-  fetch("http://localhost:8080/ProyectoHuellas/api/inicio/getAll")
+  fetch("/api/inicio/getAll")
     .then(res => res.json())
     .then(data => {
       animales = data;
@@ -174,7 +174,7 @@ document.getElementById("buscar").addEventListener("keydown", function (e) {
 });
 
 function buscarMascotasPorNombre(nombre) {
-  fetch("http://localhost:8080/ProyectoHuellas/api/inicio/buscarAnimal", {
+  fetch("/api/inicio/buscarAnimal", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -250,7 +250,7 @@ function aplicarFiltros() {
   };
 
 
-  fetch("http://localhost:8080/ProyectoHuellas/api/inicio/filtroTodos", {
+  fetch("/api/inicio/filtroTodos", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -291,7 +291,7 @@ function aplicarFiltrosResponsive() {
   };
 
 
-  fetch("http://localhost:8080/ProyectoHuellas/api/inicio/filtroTodos", {
+  fetch("/api/inicio/filtroTodos", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

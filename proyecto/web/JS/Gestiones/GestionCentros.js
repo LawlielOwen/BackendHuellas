@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("http://localhost:8080/ProyectoHuellas/api/centros/countActivos")
+    fetch("/api/centros/countActivos")
         .then(response => response.json())
         .then(data => {
             if (data.total_activos !== undefined) {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("contadorAdoptados").textContent = "0";
         });
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/centros/countInactivos")
+    fetch("/api/centros/countInactivos")
         .then(response => response.json())
         .then(data => {
             if (data.total_inactivos !== undefined) {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
-const BASE_URL = "http://localhost:8080/ProyectoHuellas/api/centros";
+const BASE_URL = "/api/centros";
 let centros = [];
 let idCentroEliminar = null;
 

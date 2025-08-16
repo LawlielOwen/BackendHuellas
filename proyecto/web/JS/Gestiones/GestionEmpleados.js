@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function cargarCentros() {
-  fetch("http://localhost:8080/ProyectoHuellas/api/centros/getAll")
+  fetch("/api/centros/getAll")
     .then((res) => res.json())
     .then((data) => {
       centros = data;
@@ -77,7 +77,7 @@ let opciones = `<option value="">Selecciona un centro</option>`;
 }
 
 function cargarEmpleados() {
-  fetch("http://localhost:8080/ProyectoHuellas/api/empleados/getAll")
+  fetch("/api/empleados/getAll")
     .then((res) => res.json())
     .then((data) => {
       empleados = data;
@@ -156,7 +156,7 @@ function agregarEmpleado() {
       centro: form.centroEmpleado.value 
     };
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/empleados/insertar", {
+    fetch("/api/empleados/insertar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(nuevoEmpleado),
@@ -223,7 +223,7 @@ function editarEmpleado() {
   const enviarEmpleado = (fotoFinal) => {
     empleado.foto = fotoFinal;
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/empleados/modificar", {
+    fetch("/api/empleados/modificar", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(empleado),
@@ -263,7 +263,7 @@ function eliminarEmpleado() {
   if (!idPersonaEliminar) return;
 
 
- fetch(`http://localhost:8080/ProyectoHuellas/api/empleados/eliminar/${idPersonaEliminar}`, {
+ fetch(`/api/empleados/eliminar/${idPersonaEliminar}`, {
 
     method: "DELETE",
   }

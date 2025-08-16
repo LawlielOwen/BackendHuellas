@@ -1,7 +1,7 @@
 
 
 function cargarAdoptante() {
-    fetch("http://localhost:8080/ProyectoHuellas/api/adoptante/getAll")
+    fetch("/api/adoptante/getAll")
         .then(res => res.json())
         .then(data => {
         cliente = data;

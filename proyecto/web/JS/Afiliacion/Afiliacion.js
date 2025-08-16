@@ -2,7 +2,7 @@
 // AfiliacionAgregar.js
 
 document.addEventListener("DOMContentLoaded", function() {
-    const url = "http://localhost:8080/ProyectoHuellas/api/Afiliacion/agregar";
+    const url = "/api/Afiliacion/agregar";
     const form = document.getElementById("formAfiliacion");
 
     form.addEventListener("submit", function(e) {

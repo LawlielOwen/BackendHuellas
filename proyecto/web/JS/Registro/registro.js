@@ -34,7 +34,7 @@ function Registro() {
         
     };
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/adoptante/registroAd", {
+    fetch("/api/adoptante/registroAd", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

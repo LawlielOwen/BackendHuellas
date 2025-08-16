@@ -12,7 +12,7 @@ function LogIn() {
         correo: correo,
         contraseña: contra
     };
-    fetch('http://localhost:8080/ProyectoHuellas/api/Empleados/consultaEmpleado', {
+    fetch('/api/Empleados/consultaEmpleado', {
         method: 'POST',
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"

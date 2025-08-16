@@ -88,7 +88,7 @@ function cambiarPagina(pagina) {
   }
 }
 function cargarSolicitudes() {
-  fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/getAll")
+  fetch("/api/solicitudes/getAll")
     .then(res => res.json())
     .then(data => {
       solicitudes = data;
@@ -99,7 +99,7 @@ function cargarSolicitudes() {
     });
 }
 async function cargarMascotas() {
-  const res = await fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/getAll");
+  const res = await fetch("/api/mascotas/getAll");
   const data = await res.json();
   animales = data;
 }
@@ -175,7 +175,7 @@ function cambiarPagina(pagina) {
   }
 }
 async function cargarAdoptante() {
-  const res = await fetch("http://localhost:8080/ProyectoHuellas/api/adoptante/getAll");
+  const res = await fetch("/api/adoptante/getAll");
   const data = await res.json();
   adoptantes = data;
 }
@@ -314,7 +314,7 @@ function aceptarSolicitud() {
     idSolicitud: idsolicitud,
     idAnimal: idAnimalSeleccionado
   };
-  fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/aceptarSoli", {
+  fetch("/api/solicitudes/aceptarSoli", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -340,7 +340,7 @@ function rechazarSolicitud() {
   const soli = {
     idSolicitud: idsolicitud
   };
-  fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/rechazarSoli", {
+  fetch("/api/solicitudes/rechazarSoli", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -360,26 +360,26 @@ function rechazarSolicitud() {
 }
 function cargarContadores() {
 
-  fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/contarDisponibles")
+  fetch("/api/solicitudes/contarDisponibles")
     .then(res => res.json())
     .then(num => {
       document.getElementById("contadorPendientes").innerHTML = num;
     })
 
-  fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/contarAceptadas")
+  fetch("/api/solicitudes/contarAceptadas")
     .then(res => res.json())
     .then(num => {
       document.getElementById("contadorAceptadas").innerHTML = num;
     })
 
-  fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/contarRechazadas")
+  fetch("/api/solicitudes/contarRechazadas")
     .then(res => res.json())
     .then(num => {
       document.getElementById("contadorRechazadas").innerHTML = num;
     })
 }
 function filtrarPorEstatus(estatus) {
-  fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/filtroEstatus", {
+  fetch("/api/solicitudes/filtroEstatus", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -438,7 +438,7 @@ document.getElementById("buscar").addEventListener("keydown", function (e) {
   }
 });
 function buscarSolicitudPorNombre(nombre) {
-  fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/buscarSoli", {
+  fetch("/api/solicitudes/buscarSoli", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -453,7 +453,7 @@ function buscarSolicitudPorNombre(nombre) {
 }
 async function cargarTodas() {
 
-  const res = await fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/getTodas");
+  const res = await fetch("/api/solicitudes/getTodas");
   const data = await res.json();
   solicitudes = data;
   actualizarTabla(data);
@@ -468,7 +468,7 @@ function eliminarSolicitud() {
   const soli = {
     idSolicitud: idEliminar
   };
-  fetch("http://localhost:8080/ProyectoHuellas/api/solicitudes/eliminarSoli", {
+  fetch("/api/solicitudes/eliminarSoli", {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json"

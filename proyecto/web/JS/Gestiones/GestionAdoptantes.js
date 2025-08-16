@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cargarContadores();
 });
 function cargarAdoptantes() {
-    fetch("http://localhost:8080/ProyectoHuellas/api/adoptante/getAll")
+    fetch("/api/adoptante/getAll")
         .then(res => res.json())
         .then(data => {
             adoptantes = data;
@@ -36,7 +36,7 @@ function cargarAdoptantes() {
 }
 function cargarContadores() {
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/adoptante/contarDisponibles")
+    fetch("/api/adoptante/contarDisponibles")
         .then(res => res.json())
         .then(num => {
             document.getElementById("contadorRegistrados").innerHTML = num;
@@ -77,7 +77,7 @@ document.getElementById("buscar").addEventListener("keydown", function (e) {
     }
 });
 function buscarAdoptante(nombre) {
-    fetch("http://localhost:8080/ProyectoHuellas/api/adoptante/buscarA", {
+    fetch("/api/adoptante/buscarA", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -122,7 +122,7 @@ if(!adoptante.nombre || !adoptante.app || !adoptante.apm || !adoptante.fechaNaci
         alerta.classList.remove("d-none");
         return
 }
-    fetch("http://localhost:8080/ProyectoHuellas/api/adoptante/modAd", {
+    fetch("/api/adoptante/modAd", {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -154,7 +154,7 @@ function eliminarAdoptante() {
     const adop = {
         idAdoptante: idAdopEliminar
     };
-fetch("http://localhost:8080/ProyectoHuellas/api/adoptante/deleteAdop", {
+fetch("/api/adoptante/deleteAdop", {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function cargarCentros() {
-  fetch("http://localhost:8080/ProyectoHuellas/api/centros/getNombres")
+  fetch("http://localhost:8080/api/centros/getNombres")
     .then(res => res.json())
     .then(data => {
       const selectInstitucion = document.getElementById("institucion");
@@ -120,7 +120,7 @@ function enviarDonacion(donacion) {
   const formData = new URLSearchParams();
   formData.append('datosDonacion', JSON.stringify(donacion));
 
-  fetch('http://localhost:8080/ProyectoHuellas/api/donacion/saveDonacion', {
+  fetch('/api/donacion/saveDonacion', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',

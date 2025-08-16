@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 function cargarCentros() {
-    fetch("http://localhost:8080/ProyectoHuellas/api/centros/getAll")
+    fetch("/api/centros/getAll")
         .then(res => res.json())
         .then(data => {
             centros = data;
@@ -57,7 +57,7 @@ function cargarCentros() {
 
 
 function cargarMascotas() {
-    fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/getAll")
+    fetch("/api/mascotas/getAll")
         .then(res => res.json())
         .then(data => {
             animales = data;
@@ -190,7 +190,7 @@ function filtrarTodo(especie, estatus) {
         return;
     }
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/filtroTodos", {
+    fetch("/api/mascotas/filtroTodos", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -266,7 +266,7 @@ function agregarMascota() {
         };
 
 
-        fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/saveAnimal", {
+        fetch("/api/mascotas/saveAnimal", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -346,7 +346,7 @@ function modificarAnimal() {
         return;
     }
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/updateAnimal", {
+    fetch("/api/mascotas/updateAnimal", {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -377,7 +377,7 @@ function eliminarAnimal() {
         idAnimal: idAnimalEliminar
     };
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/deleteAnimal", {
+    fetch("/api/mascotas/deleteAnimal", {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
@@ -404,7 +404,7 @@ document.getElementById("buscar").addEventListener("keydown", function (e) {
 });
 
 function buscarMascotasPorNombre(nombre) {
-    fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/buscarAnimal", {
+    fetch("/api/mascotas/buscarAnimal", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -419,14 +419,14 @@ function buscarMascotasPorNombre(nombre) {
 }
 function cargarContadores() {
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/contarDisponibles")
+    fetch("/api/mascotas/contarDisponibles")
         .then(res => res.json())
         .then(num => {
             document.getElementById("contadorDisponibles").innerHTML = num;
         })
 
 
-    fetch("http://localhost:8080/ProyectoHuellas/api/mascotas/contarAdoptados")
+    fetch("/api/mascotas/contarAdoptados")
         .then(res => res.json())
         .then(num => {
             document.getElementById("contadorAdoptados").innerHTML = num;
