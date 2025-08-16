@@ -21,7 +21,7 @@ function LogIn(){
       correo:correo,
         contraseña:contra,
    };
-     fetch("http://localhost:8080/api/adoptante/consultaAd", {
+     fetch("/api/adoptante/consultaAd", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

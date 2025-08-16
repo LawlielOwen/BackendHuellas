@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function cargarCentros() {
-  fetch("http://localhost:8080/api/centros/getNombres")
+  fetch("/api/centros/getNombres")
     .then(res => res.json())
     .then(data => {
       const selectInstitucion = document.getElementById("institucion");
