@@ -237,7 +237,7 @@ function agregarMascota() {
     const caracter = document.getElementById("caracter").value;
     const alerta = document.getElementById("fallo");
 
-    if (!nombre || !genero || !edad || !peso || !especie || !fotoFile || !centro || !descripcion || !raza || !tamanio || !caracter) {
+    if (!nombre || !genero || !edadFormateada || !peso || !especie || !fotoFile || !centro || !descripcion || !raza || !tamanio || !caracter) {
         document.getElementById("mensaje-error").innerHTML = "Por favor, completa todos los campos.";
         alerta.classList.remove("d-none");
         alerta.classList.add("show");
@@ -278,6 +278,7 @@ function agregarMascota() {
 
                 cargarMascotas();
                 cargarContadores();
+             
             })
     };
 

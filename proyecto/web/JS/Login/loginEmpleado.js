@@ -45,7 +45,7 @@ function LogIn() {
 
             document.getElementById('correo').value = "";
             document.getElementById('password').value = "";
-            window.location.href = "/ProyectoHuellas/Empleados/GestionMascotas.html";
+            window.location.href = "GestionMascotas.html";
         }
     })
     .catch(error => {
